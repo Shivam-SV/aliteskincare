@@ -105,7 +105,6 @@ export default function Header() {
 
     return (
         <>
-            {/* Banner Header - Hidden when scrolled */}
             <div className={`bg-primary-800 text-white border-b border-primary-700 transition-all duration-300 ease-in-out ${isScrolled ? "max-h-0 overflow-hidden opacity-0" : "max-h-16 opacity-100"}`}>
                 <div className="container mx-auto px-4">
                     <div className="flex items-center md:justify-between justify-center py-2">
@@ -122,9 +121,7 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* Navbar */}
             <div className={`bg-white border-b border-neutral-200 shadow sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "shadow-md" : ""}`}>
-                {/* Top Navbar - Hidden when scrolled */}
                 <div className={`border-b border-neutral-200 transition-all duration-300 ease-in-out ${isScrolled ? "max-h-0 overflow-hidden opacity-0" : "max-h-32 opacity-100"}`}>
                     <div className="container mx-auto px-4">
                         <div className="flex items-center justify-between py-2">
@@ -136,7 +133,6 @@ export default function Header() {
                                 />
                             </a>
                             
-                            {/* Desktop Search Bar */}
                             <div 
                                 className="hidden md:flex items-center gap-2 border border-neutral-200 rounded-lg py-1 px-3 cursor-pointer hover:border-primary-500 transition-colors"
                                 onClick={openSearchModal}
@@ -151,7 +147,6 @@ export default function Header() {
                             </div>
 
                             <div className="flex items-center gap-1">
-                                {/* Mobile Search Icon */}
                                 <button
                                     onClick={openSearchModal}
                                     className="md:hidden text-neutral-600 flex items-center rounded px-3 py-2 hover:text-primary-700 hover:bg-neutral-200 transition-colors duration-150"
@@ -176,10 +171,8 @@ export default function Header() {
                     </div>
                 </div>
 
-                {/* Navigation Menu */}
                 <div className="container mx-auto px-4 relative">
                     <div className="relative flex items-center">
-                        {/* Left Arrow - Mobile Only */}
                         {canScrollLeft && (
                             <button
                                 onClick={() => scrollNav("left")}
@@ -190,7 +183,6 @@ export default function Header() {
                             </button>
                         )}
 
-                        {/* Scrollable Navigation */}
                         <div
                             ref={navScrollRef}
                             className="flex items-center gap-2 p-1 overflow-x-auto scrollbar-hide scroll-smooth"
@@ -209,11 +201,10 @@ export default function Header() {
                             })}
                         </div>
 
-                        {/* Right Arrow - Mobile Only */}
                         {canScrollRight && (
                             <button
                                 onClick={() => scrollNav("right")}
-                                className="md:hidden absolute right-0 z-10 bg-white shadow-md rounded-full p-2 hover:bg-neutral-100 transition-colors"
+                                className="lg:hidden absolute right-0 z-10 bg-white shadow-md rounded-full p-2 hover:bg-neutral-100 transition-colors"
                                 aria-label="Scroll right"
                             >
                                 <ChevronRight className="w-5 h-5 text-neutral-600" />
