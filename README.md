@@ -65,6 +65,19 @@ VITE_API_URL=http://localhost:4000/api
 
 > **Note:** All environment variables prefixed with `VITE_` are exposed to the client-side code. Make sure not to include sensitive information in these variables.
 
+## Database connectivity 
+
+Before getting into project, make sure you create a database in mysql, migrate and seed the database.
+
+**Migrating the database**
+```bash
+bun run db:push
+```
+**Seed the database**
+```bash
+bun run db:seed
+```
+
 ## Running the Project
 
 You have a few options for running the apps:
