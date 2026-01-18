@@ -237,7 +237,7 @@ export default function Header() {
                             <h2 className="text-xl font-semibold text-neutral-800">Search Products</h2>
                             <button
                                 onClick={closeSearchModal}
-                                className="text-neutral-500 hover:text-neutral-700 transition-colors"
+                                className="text-neutral-500 hover:text-neutral-700 transition-colors cursor-pointer"
                                 aria-label="Close search"
                             >
                                 <X className="w-6 h-6" />
@@ -259,7 +259,7 @@ export default function Header() {
                                     {["Face Wash", "Moisturizer", "Sunscreen", "Serum", "Cleanser"].map((term, idx) => (
                                         <button
                                             key={idx}
-                                            className="px-3 py-1 text-sm bg-neutral-100 hover:bg-primary-100 hover:text-primary-700 rounded-full transition-colors"
+                                            className="px-3 py-1 cursor-pointer text-sm bg-neutral-100 hover:bg-primary-100 hover:text-primary-700 rounded-full transition-colors"
                                         >
                                             {term}
                                         </button>

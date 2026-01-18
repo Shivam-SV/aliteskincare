@@ -1,9 +1,9 @@
 export default function ProductVideos() {
     return (
-        <section className="bg-gradient-to-b from-white to-secondary-50 py-16">
+        <section className="bg-linear-to-b from-white to-secondary-50 py-16">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-10">
-                    <h2 className="text-4xl md:text-5xl text-secondary-700 font-serif mb-3">Showcase Time 😉</h2>
+                    <h2 className="text-4xl md:text-5xl text-neutral-700 font-serif mb-3">Showcase Time 😉</h2>
                     <p className="text-lg md:text-xl text-secondary-700 max-w-2xl mx-auto">Watch our products in action. See the quality and results that make Alite special.</p>
                 </div>
 

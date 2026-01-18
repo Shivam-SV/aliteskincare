@@ -22,12 +22,20 @@ export default function ProductCard({ product }: ProductCardProps) {
         console.log("Add to cart:", product.id);
     };
 
+    const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+        e.currentTarget.src = "https://placehold.co/400x400";
+    };
+
     return (
         <div className="bg-white shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl group">
             <div className="relative p-2">
                 <img 
                     src={product.imageUrl || "https://placehold.co/400x400"} 
                     alt={product.name} 
+                    loading="lazy"
+                    fetchPriority="low"
+                    decoding="async"
+                    onError={handleImageError}
                     className="aspect-square w-full h-full object-cover rounded-2xl transition-transform duration-300 group-hover:scale-105" 
                 />
                 {hasDiscount && (
@@ -57,17 +65,17 @@ export default function ProductCard({ product }: ProductCardProps) {
                             </span>
                         )}
                     </div>
-                    <div className="flex items-center gap-1.5 flex-shrink-0">
+                    <div className="flex items-center gap-1.5 shrink-0">
                         <button
                             onClick={handleBuyNow}
-                            className="bg-primary-700 text-white p-2 rounded-lg hover:bg-primary-800 active:scale-95 transition-all duration-200 shadow-md"
+                            className="bg-primary-700 cursor-pointer text-white p-2 rounded-lg hover:bg-primary-800 active:scale-95 transition-all duration-200 shadow-md"
                             aria-label="Buy Now"
                         >
                             <Zap className="w-4 h-4" />
                         </button>
                         <button
                             onClick={handleAddToCart}
-                            className="bg-white border-2 border-primary-700 text-primary-700 p-2 rounded-lg hover:bg-primary-50 active:scale-95 transition-all duration-200 shadow-md"
+                            className="bg-white border-2 cursor-pointer border-primary-700 text-primary-700 p-2 rounded-lg hover:bg-primary-50 active:scale-95 transition-all duration-200 shadow-md"
                             aria-label="Add to Cart"
                         >
                             <ShoppingCart className="w-4 h-4" />
@@ -89,13 +97,13 @@ export default function ProductCard({ product }: ProductCardProps) {
                     <div className="flex items-center gap-2">
                         <button
                             onClick={handleBuyNow}
-                            className="flex-1 bg-primary-700 text-white py-2.5 px-4 rounded-lg font-semibold hover:bg-primary-800 active:scale-[0.98] transition-all duration-200 text-sm shadow-md hover:shadow-lg"
+                            className="flex-1 bg-primary-700 cursor-pointer text-white py-2.5 px-4 rounded-lg font-semibold hover:bg-primary-800 active:scale-[0.98] transition-all duration-200 text-sm shadow-md hover:shadow-lg"
                         >
                             Buy Now
                         </button>
                         <button
                             onClick={handleAddToCart}
-                            className="bg-white border-2 border-primary-700 text-primary-700 p-2.5 rounded-lg hover:bg-primary-50 active:scale-[0.98] transition-all duration-200 flex items-center justify-center shadow-md hover:shadow-lg"
+                            className="bg-white border-2 cursor-pointer border-primary-700 text-primary-700 p-2.5 rounded-lg hover:bg-primary-50 active:scale-[0.98] transition-all duration-200 flex items-center justify-center shadow-md hover:shadow-lg"
                             aria-label="Add to Cart"
                         >
                             <ShoppingCart className="w-5 h-5" />

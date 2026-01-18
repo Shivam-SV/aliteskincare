@@ -185,7 +185,7 @@ export default function Reviews() {
                     onMouseLeave={handleMouseLeave}
                 >
                     <div 
-                        className="flex transition-transform duration-500 ease-in-out"
+                        className="flex transition-transform duration-500 ease-in-out pb-8"
                         style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
                     >
                         {reviews.map((review) => (
