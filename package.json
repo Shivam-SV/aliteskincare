@@ -1,0 +1,22 @@
+{
+  "name": "aliteskincare",
+  "version": "1.0.0",
+  "description": "Alite Skincare - Full-stack application with React SSR and tRPC",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "cd apps/web && bun run dev",
+    "dev:api": "cd apps/api && bun run dev",
+    "build": "cd apps/web && bun run build",
+    "start:web": "cd apps/web && bun run start",
+    "start:api": "cd apps/api && bun run start",
+    "db:generate": "cd apps/api && bun run db:generate",
+    "db:push": "cd apps/api && bun run db:push",
+    "db:migrate": "cd apps/api && bun run db:migrate",
+    "db:studio": "cd apps/api && bun run db:studio",
+    "db:seed": "cd apps/api && bun run db:seed"
+  }
+}

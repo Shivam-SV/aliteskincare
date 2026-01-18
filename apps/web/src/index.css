@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import "tailwindcss";
+
+/* Alite Skincare Color Palette - Based on https://www.aliteskincare.in/ */
+@theme {
+  --font-sans: "Nunito Sans", sans-serif;
+  /* Primary Colors - Burgundy (#8f2451) - Premium Skincare Brand */
+  --color-primary-50: #fdf2f7;
+  --color-primary-100: #fce7ef;
+  --color-primary-200: #f9cfe0;
+  --color-primary-300: #f5a7c7;
+  --color-primary-400: #ef7ba8;
+  --color-primary-500: #e64d7f;
+  --color-primary-600: #d12d66;
+  --color-primary-700: #8f2451;
+  --color-primary-800: #761d43;
+  --color-primary-900: #5d1635;
+  --color-primary-950: #3d0e23;
+
+  /* Secondary Colors - Natural Green (#6DBE92) - Fresh, Natural Skincare Brand */
+  --color-secondary-50: #f0f9f5;
+  --color-secondary-100: #d4ede0;
+  --color-secondary-200: #a9dbc1;
+  --color-secondary-300: #7ec9a2;
+  --color-secondary-400: #6dbe92;
+  --color-secondary-500: #5aa87d;
+  --color-secondary-600: #4a8f68;
+  --color-secondary-700: #3a7153;
+  --color-secondary-800: #2a533e;
+  --color-secondary-900: #1a3529;
+  --color-secondary-950: #0f1f18;
+
+  /* Accent Colors - Warm Yellow (#F2C14E) - Call-to-Action, Highlights */
+  --color-accent-50: #fefbf0;
+  --color-accent-100: #fdf4d9;
+  --color-accent-200: #fbe9b3;
+  --color-accent-300: #f9de8d;
+  --color-accent-400: #f2c14e;
+  --color-accent-500: #e6a82e;
+  --color-accent-600: #c98f1f;
+  --color-accent-700: #a67518;
+  --color-accent-800: #845b12;
+  --color-accent-900: #62410d;
+  --color-accent-950: #3d2808;
+
+  /* Neutral Colors - Clean, Professional */
+  --color-neutral-50: #ffffff;
+  --color-neutral-100: #f4f4f4;
+  --color-neutral-200: #e8e8e8;
+  --color-neutral-300: #d1d1d1;
+  --color-neutral-400: #b4b4b4;
+  --color-neutral-500: #8c8c8c;
+  --color-neutral-600: #6b6b6b;
+  --color-neutral-700: #4a4a4a;
+  --color-neutral-800: #333333;
+  --color-neutral-900: #1f1f1f;
+  --color-neutral-950: #0a0a0a;
+}
+
+:root {
+  /* Primary Colors - Burgundy (#8f2451) - Premium Skincare Brand */
+  --color-primary-50: #fdf2f7;
+  --color-primary-100: #fce7ef;
+  --color-primary-200: #f9cfe0;
+  --color-primary-300: #f5a7c7;
+  --color-primary-400: #ef7ba8;
+  --color-primary-500: #e64d7f;
+  --color-primary-600: #d12d66;
+  --color-primary-700: #8f2451;
+  --color-primary-800: #761d43;
+  --color-primary-900: #5d1635;
+  --color-primary-950: #3d0e23;
+
+  /* Secondary Colors - Natural Green (#6DBE92) - Fresh, Natural Skincare Brand */
+  --color-secondary-50: #f0f9f5;
+  --color-secondary-100: #d4ede0;
+  --color-secondary-200: #a9dbc1;
+  --color-secondary-300: #7ec9a2;
+  --color-secondary-400: #6dbe92;
+  --color-secondary-500: #5aa87d;
+  --color-secondary-600: #4a8f68;
+  --color-secondary-700: #3a7153;
+  --color-secondary-800: #2a533e;
+  --color-secondary-900: #1a3529;
+  --color-secondary-950: #0f1f18;
+
+  /* Accent Colors - Warm Yellow (#F2C14E) - Call-to-Action, Highlights */
+  --color-accent-50: #fefbf0;
+  --color-accent-100: #fdf4d9;
+  --color-accent-200: #fbe9b3;
+  --color-accent-300: #f9de8d;
+  --color-accent-400: #f2c14e;
+  --color-accent-500: #e6a82e;
+  --color-accent-600: #c98f1f;
+  --color-accent-700: #a67518;
+  --color-accent-800: #845b12;
+  --color-accent-900: #62410d;
+  --color-accent-950: #3d2808;
+
+  /* Neutral Colors - Clean, Professional */
+  --color-neutral-50: #ffffff;
+  --color-neutral-100: #f4f4f4;
+  --color-neutral-200: #e8e8e8;
+  --color-neutral-300: #d1d1d1;
+  --color-neutral-400: #b4b4b4;
+  --color-neutral-500: #8c8c8c;
+  --color-neutral-600: #6b6b6b;
+  --color-neutral-700: #4a4a4a;
+  --color-neutral-800: #333333;
+  --color-neutral-900: #1f1f1f;
+  --color-neutral-950: #0a0a0a;
+
+  /* Semantic Colors */
+  --color-success: #6dbe92;
+  --color-success-light: #d4ede0;
+  --color-success-dark: #3a7153;
+
+  --color-error: #e63946;
+  --color-error-light: #f8d7da;
+  --color-error-dark: #c1121f;
+
+  --color-warning: #f2c14e;
+  --color-warning-light: #fdf4d9;
+  --color-warning-dark: #c98f1f;
+
+  --color-info: #4a90e2;
+  --color-info-light: #d6e9f5;
+  --color-info-dark: #2c5aa0;
+
+  /* Brand Specific Colors - Direct from Alite Skincare Website */
+  --color-brand-primary: #8f2451;
+  --color-brand-secondary: #6dbe92;
+  --color-brand-accent: #f2c14e;
+  --color-brand-text: #333333;
+  --color-brand-bg-light: #f4f4f4;
+  --color-brand-bg-white: #ffffff;
+
+  /* Background Colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f4f4f4;
+  --color-bg-tertiary: #e8e8e8;
+
+  /* Text Colors */
+  --color-text-primary: #333333;
+  --color-text-secondary: #8c8c8c;
+  --color-text-tertiary: #b4b4b4;
+  --color-text-inverse: #ffffff;
+  --color-text-on-primary: #ffffff;
+  --color-text-on-accent: #333333;
+
+  /* Border Colors */
+  --color-border-light: #e8e8e8;
+  --color-border-medium: #d1d1d1;
+  --color-border-dark: #8c8c8c;
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: #1f1f1f;
+    --color-bg-secondary: #2a2a2a;
+    --color-bg-tertiary: #333333;
+    
+    --color-text-primary: #f4f4f4;
+    --color-text-secondary: #b4b4b4;
+    --color-text-tertiary: #8c8c8c;
+    --color-text-inverse: #333333;
+    
+    --color-border-light: #333333;
+    --color-border-medium: #4a4a4a;
+    --color-border-dark: #6b6b6b;
+  }
+}
